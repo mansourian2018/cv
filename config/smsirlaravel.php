@@ -12,11 +12,11 @@ return [
 	// SMS.ir Web Service URL
 	'webservice-url' => env('SMSIR-WEBSERVICE-URL','https://ws.sms.ir/'),
 	// SMS.ir Api Key
-	'api-key' => env('SMSIR-API-KEY','Your api key'),
+	'api-key' => env('SMSIR_API_KEY','Your api key'),
 	// SMS.ir Secret Key
-	'secret-key' => env('SMSIR-SECRET-KEY','Your secret key'),
+	'secret-key' => env('SMSIR_SECRET_KEY','Your secret key'),
 	// Your sms.ir line number
-	'line-number' => env('SMSIR-LINE-NUMBER','Your Sms.ir Line Number'),
+	'line-number' => env('SMSIR_LINE_NUMBER','Your Sms.ir Line Number'),
 	// ======================================================================
 	// set true if you want log to the database
 	'db-log' => false,
