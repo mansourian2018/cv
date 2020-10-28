@@ -11,16 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 Route::group(['prefix' => 'admin','middleware'=>'auth'], function () {
     Route::resource('ads', 'AdsController');
 });
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/cv',function(){
+//Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/',function(){
     return view('cv');
 });
 Route::post('/content','ContentController@create')->name('content');
