@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="70-VDvbCN0_Vg_hht5711_7oSLBetMDcySrcRzip8ww" />
     <meta name="description" content="اصغر منصوریان">
     <meta name="description" content="رزومه">
     <meta name="description" content="رزومه اصغر منصوریان">    
