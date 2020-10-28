@@ -47,6 +47,9 @@
             width: 50%;
             display: none
         }
+        body{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
         </style>
 </head>
 
@@ -133,8 +136,9 @@
                                         <p>ساکن استان آذربایجان شرقی شهر تبریز  </p>
                                         <p>متولد سال ۱۳۷۴</p>
                                         <p>مدرک کارشناسی نرم افزار</p>
-                                        <p>.به کد نویسی مخصوصا کد نویسی تمیز و خوانا اهمیت میدم و علاقه ی زیادی دارم</p>
                                         <p style="direction:rtl">  بکند با زبان php و فریم ورک لاراول کار کردم.</p>
+                                        <p>.به کد نویسی مخصوصا کد نویسی تمیز و خوانا اهمیت میدم و علاقه ی زیادی دارم</p>
+                                        <p>.دوست دارم تو تیمهای بزرگ و با افراد بیشتر کد نویسی کنم تا هر چه بیشتر و بهتر یاد بگیرم</p>
                                         <!-- <div class="w-btn">
                                            <a href="#" class="w_btn2">Download Resume</a>
                                         </div> -->
