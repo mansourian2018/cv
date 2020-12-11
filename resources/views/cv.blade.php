@@ -408,8 +408,8 @@
                                 @enderror
                                 <br>
                                 <div class="text-right" style="display: flex;justify-content: flex-end;">
-                                    {!! NoCaptcha::display() !!}
-                                    {!! NoCaptcha::renderJs() !!}
+                                    {!! \NoCaptcha::display() !!}
+                                    {!! \NoCaptcha::renderJs() !!}
                                 </div>
                                 <div class="w-btn">
                                     <button type="submit" id="submitButton" class="btn btn-success">ارسال</button>
