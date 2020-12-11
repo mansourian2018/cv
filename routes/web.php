@@ -20,3 +20,8 @@ Route::get('/',function(){
     return view('cv');
 });
 Route::post('/content','ContentController@create')->name('content');
+
+Route::get('/composer',function (){
+    system('composer dump-autoload');
+    return 'done';
+});
