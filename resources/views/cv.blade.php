@@ -354,16 +354,7 @@
                                 </a>
                                 <a href="http://www.analanguage.ir/" target="_blank">مشاهده</a>
                             </div>
-                            <!--<div class="col-md-3 col-sm-4 Daesign Website single_portfolio width-one">
-                                <a href="{{asset('img/cv/img/portal.png')}}" class="portfolio_img">
-                                    <img class="img_portfolio" src="{{asset('img/cv/img/portal.png')}}" alt="">
-                                </a>
-                                <a href="http://www.portalagahi.com/" target="_blank">مشاهده</a>
 
-                            </div>
-                            <!--========= end single portfolio =========-->
-
-                            <!--=========end single portfolio =========-->
                                                     <!--=========  end portfolio_items =========-->
                 </div>
             </div>
@@ -496,7 +487,7 @@
     <!-- === active js === -->
     <script src="{{asset('js/cv/js/active.js')}}"></script>
 <script src="{{asset('js/sweetalert.min.js')}}"></script>
-</body>
+
 @if(session()->has('success'))
 <script>
     alert('{{session()->get('success')}}');
@@ -549,4 +540,5 @@ function sendContent(event){
     });
 }
 </script>
+    </body>
 </html>

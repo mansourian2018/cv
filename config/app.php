@@ -178,9 +178,6 @@ return [
         App\Providers\RouteServiceProvider::class,
         //sms.ir package provider for send sms
         Ipecompany\Smsirlaravel\SmsirlaravelServiceProvider::class,
-
-
-
     ],
 
     /*
