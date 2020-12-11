@@ -8,23 +8,21 @@ use App\Content;
 use Illuminate\Support\Facades\Validator;
 use App\Event\NewContent;
 use Response;
-use GuzzleHttp\Client;
-
+ 
 class ContentController extends Controller
 {
     public function create(Request $request){
        $validator = Validator::make($request->all(),[
             "name"    => "required|max:200",
             "email"  => "required|max:200|email",
-            'description' => 'required',
-           'g-recaptcha-response' => 'required|captcha'
-       ]);
+            'description' => 'required'
+        ]);
         if($validator->fails()){
             return Response::json(array(
             'code'      =>  401,
             'message'   =>  $validator->messages()->get('*')
-        ), 401);
-        }
+        ), 401);  
+        } 
         $content = new Content();
         $content->name = $request['name'];
         $content->email = $request['email'];

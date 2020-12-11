@@ -7,7 +7,7 @@
     <meta name="google-site-verification" content="70-VDvbCN0_Vg_hht5711_7oSLBetMDcySrcRzip8ww" />
     <meta name="description" content="اصغر منصوریان">
     <meta name="description" content="رزومه">
-    <meta name="description" content="رزومه اصغر منصوریان">
+    <meta name="description" content="رزومه اصغر منصوریان">    
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>اصغر منصوریان</title>
     <!-- === Bootstrap=== -->
@@ -30,9 +30,9 @@
     <link rel="stylesheet" href="{{asset('css/cv/main.css')}}">
     <!-- === responsive css === -->
     <link rel="stylesheet" href="{{asset('css/cv/css/responsive.css')}}">
-
+     
     <link rel="stylesheet" href="{{asset('css/sweetalert2.min.css')}}">
-
+    
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -127,7 +127,7 @@
                                 <div class="single_slide"><img src="{{asset('img/cv/img/me.jpg')}}" alt=""></div>
                                 <!--=========end single img1 =========-->
                                 <!--========= single img2=========-->
-
+                              
                             </div>
                         </div>
                         <div class="col-sm-6 ">
@@ -353,7 +353,7 @@
                                     <img class="img_portfolio" src="{{asset('img/cv/img/ana.png')}}" alt="">
                                 </a>
                                 <a href="http://www.analanguage.ir/" target="_blank">مشاهده</a>
-                            </div>
+                            </div>                    
                             <!--<div class="col-md-3 col-sm-4 Daesign Website single_portfolio width-one">
                                 <a href="{{asset('img/cv/img/portal.png')}}" class="portfolio_img">
                                     <img class="img_portfolio" src="{{asset('img/cv/img/portal.png')}}" alt="">
@@ -362,7 +362,7 @@
 
                             </div>
                             <!--========= end single portfolio =========-->
-
+                           
                             <!--=========end single portfolio =========-->
                                                     <!--=========  end portfolio_items =========-->
                 </div>
@@ -415,14 +415,6 @@
                                 @error('description')
                                 <span>{{$message}}</span>
                                 @enderror
-                            <div class="row">
-                                <div class="col-md-4"></div>
-                                <div class="form-group col-md-4">
-                                    <label for="ReCaptcha">Recaptcha:</label>
-                                    {!! NoCaptcha::renderJs() !!}
-                                    {!! NoCaptcha::display() !!}
-                                </div>
-                            </div>
                                 <div class="w-btn">
                                     <button type="submit" id="submitButton" class="btn btn-success">ارسال</a>
                                 </div>
@@ -430,7 +422,7 @@
                         </div>
                         <!--========= end contact_form=========-->
                     </div>
-
+                    
                     <div class="col-sm-6">
                         <!--=========  contact_address=========-->
                         <div class="contact_address">
@@ -443,7 +435,7 @@
                         <!--========= end  contact_address=========-->
                     </div>
                 </div>
-
+            
             <!--========end contact wraper=========-->
         </div>
     </div>
@@ -523,7 +515,7 @@ function sendContent(event){
         url:"{{route('content')}}",
         type: "POST",
         headers: {
-                    'X-CSRF-Token': token
+                    'X-CSRF-Token': token 
                },
         data:{'name':name,'email':email,'description':description},
         success:function(success){
@@ -536,7 +528,7 @@ function sendContent(event){
             $('#loader').css('display','none');
             if(error.status == 419){
                 $('#loader').css('display','none');
-                var error = JSON.parse(error.responseText);
+                var error = JSON.parse(error.responseText);  
                 var errorMessage ='';
                 for(i in  error.message){
                     errorMessage = errorMessage + error.message[i] +'\n';
