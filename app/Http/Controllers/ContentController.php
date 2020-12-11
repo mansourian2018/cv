@@ -16,7 +16,7 @@ class ContentController extends Controller
             "name"    => "required|max:200",
             "email"  => "required|max:200|email",
             'description' => 'required',
-           'g-recaptcha-response' => 'required|captcha'
+           'captcha' => 'required|captcha'
        ]);
         if($validator->fails()){
             return Response::json(array(

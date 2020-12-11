@@ -415,10 +415,13 @@
                                 @error('description')
                                 <span>{{$message}}</span>
                                 @enderror
-                            {!! NoCaptcha::renderJs() !!}
-                            {!! NoCaptcha::display() !!}
+                                <br>
+                                <div class="text-right" style="display: flex;justify-content: flex-end;">
+                                    {!! NoCaptcha::display() !!}
+                                    {!! NoCaptcha::renderJs() !!}
+                                </div>
                                 <div class="w-btn">
-                                    <button type="submit" id="submitButton" class="btn btn-success">ارسال</a>
+                                    <button type="submit" id="submitButton" class="btn btn-success">ارسال</button>
                                 </div>
                             </form>
                         </div>
@@ -511,6 +514,7 @@ function sendContent(event){
     var email = $('#email').val();
     var description = $('#description').val();
     var token = $('input[name=_token]').val();
+    var captcha = $('#g-recaptcha-response').val();
     $('#loader').css('display','block');
     $('#submitButton').prop('disabled', true);
     $.ajax({
@@ -519,7 +523,7 @@ function sendContent(event){
         headers: {
                     'X-CSRF-Token': token
                },
-        data:{'name':name,'email':email,'description':description},
+        data:{'name':name,'email':email,'description':description,'captcha':captcha},
         success:function(success){
             $('#loader').css('display','none');
             $('#submitButton').prop('disabled', false);
@@ -528,7 +532,7 @@ function sendContent(event){
         error:function(error){
             $('#submitButton').prop('disabled', false);
             $('#loader').css('display','none');
-            if(error.status == 419){
+            if(error.status == 401 || error.status == 419){
                 $('#loader').css('display','none');
                 var error = JSON.parse(error.responseText);
                 var errorMessage ='';
