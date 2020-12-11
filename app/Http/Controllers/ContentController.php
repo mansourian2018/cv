@@ -24,6 +24,8 @@ class ContentController extends Controller
             'code'      =>  401,
             'message'   =>  $validator->messages()->get('*')
         ), 401);
+
+
         }
         $content = new Content();
         $content->name = $request['name'];
