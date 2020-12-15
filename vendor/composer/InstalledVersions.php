@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '82e9c1944a31d659ebe6de8195e065e792a131ff',
+    'reference' => 'ef1e155eaeb43bb3351e1b4361aef8f66cc4a555',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -456,6 +456,15 @@ private static $installed = array (
       ),
       'reference' => '26b1712166a366e3f8a1fd1452d0c3b76cad612a',
     ),
+    'laravel-notification-channels/telegram' => 
+    array (
+      'pretty_version' => '0.5.1',
+      'version' => '0.5.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2cedb10b78219cc91a285eaa5a3de0db405cc207',
+    ),
     'laravel/framework' => 
     array (
       'pretty_version' => 'v7.28.4',
@@ -472,7 +481,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '82e9c1944a31d659ebe6de8195e065e792a131ff',
+      'reference' => 'ef1e155eaeb43bb3351e1b4361aef8f66cc4a555',
     ),
     'laravel/tinker' => 
     array (

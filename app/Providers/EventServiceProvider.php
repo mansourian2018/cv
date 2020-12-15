@@ -18,10 +18,14 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
-        'App\Event\NewContent' =>[
+        'App\Events\NewContent' =>[
             'App\Listeners\sendEmail',
             'App\Listeners\sendMessage'
-        ]
+        ],
+        'App\Events\TelegramBot' => [
+           'App\Listeners\telegramMessage'
+            ],
+
     ];
 
     /**

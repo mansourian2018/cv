@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Event;
+namespace App\Events;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
@@ -10,22 +10,19 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class NewContent
+class TelegramBot
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $contentName,$contentEmail,$contentDescription;
+    public $chatId;
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct($contentName,$contentEmail,$contentDescription)
+    public function __construct($chatId)
     {
-        $this->contentName = $contentName;
-        $this->contentEmail = $contentEmail;
-        $this->contentDescription = $contentDescription;
-
+        $this->chatId = $chatId;
     }
 
     /**

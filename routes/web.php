@@ -21,7 +21,12 @@ Route::get('/',function(){
 });
 Route::post('/content','ContentController@create')->name('content');
 
+Route::post('/telegram','Bot\InstagramController@test');
+
+
+
 Route::get('/composer',function (){
     \Artisan::call('dump-autoload');
     echo 'dump-autoload complete';
 });
+
